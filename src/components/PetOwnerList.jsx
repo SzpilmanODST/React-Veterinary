@@ -71,7 +71,14 @@ export default function PetOwnerList() {
                     <td>{petOwner.name + " " + petOwner.last_name}</td>
                     <td>{petOwner.cellphone}</td>
                     <td>{petOwner.email}</td>
-                    <td>Ver</td>
+                    <td>
+                      <a
+                        href={`/pet-owners/details/${petOwner.id}`}
+                        className='rounded bg-teal-500 hover:bg-teal-800 text-white my-2 p-3  cursor-pointer'
+                      >
+                        Ver
+                      </a>
+                    </td>
                     <td>
                       <a
                         href={`/pet-owners/edit/${petOwner.id}`}

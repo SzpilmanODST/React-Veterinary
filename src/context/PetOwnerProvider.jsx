@@ -47,11 +47,12 @@ const PetOwnerProvider = ({children}) => {
     }
 
     // Show
-    const showPetOwner = async (id) => {
+    const showPetOwner = async (id, dayAndHour, page) => {
         try {
-            const data = await axiosClient(`/api/pet-owners/${id}`);
+            const data = await axiosClient(`/api/pet-owners/${id}?day_and_hour=${dayAndHour}&page=${page}`);
             dispatch({ type: 'FETCH_PETOWNER_SUCCESS', payload: data.data})
-            return data.data.petOwner
+            console.log(data.data);
+            return data.data;
 
         } catch(error) {
             console.log(error)

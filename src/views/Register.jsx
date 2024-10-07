@@ -5,7 +5,7 @@ import Alert from '../components/Alert';
 export default function Register() {
 
   const {errors, register} = useAuth({
-    middleware: 'guest',
+    middleware: 'auth',
     url: '/appointments'
   });
 

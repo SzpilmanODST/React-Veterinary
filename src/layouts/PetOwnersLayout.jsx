@@ -1,11 +1,8 @@
 import { Outlet } from 'react-router-dom'
 import NavBar from "../components/NavBar";
-import { useAuth } from '../hooks/useAuth'
 import { ToastContainer } from 'react-toastify'
 
 export default function PetOwnersLayout() {
-
-  const {} = useAuth({middleware: 'auth'})
 
   return (
     <>

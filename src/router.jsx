@@ -9,6 +9,7 @@ import PetOwners from "./views/PetOwners";
 import PetOwnerCreate from "./views/PetOwnerCreate";
 import PetOwnersLayout from "./layouts/PetOwnersLayout";
 import PetOwnerEdit from "./views/PetOwnerEdit";
+import PetOwnerDetails from "./views/PetOwnerDetails";
 
 
 const router = createBrowserRouter([
@@ -55,6 +56,10 @@ const router = createBrowserRouter([
             {
                 path: '/pet-owners/edit/:id',
                 element: <PetOwnerEdit />
+            },
+            {
+                path: '/pet-owners/details/:id',
+                element: <PetOwnerDetails />
             }
         ]
     }
