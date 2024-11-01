@@ -7,17 +7,19 @@ export default function AuthLayout() {
     <>
     <NavBar />
 
-    <main className="max-w-4xl m-auto mt-10 md:mt-28 flex flex-col md:flex-row items-center">
+    <div className="p-10 w-5/12 m-auto">
+      <Outlet />
+    </div>
+
+    {/*<main className="max-w-4xl m-auto mt-10 md:mt-28 flex flex-col md:flex-row items-center">
         <img 
             src="../img/logo.jpg" 
             alt="Imagen Logo" 
             className="max-w-xs"
         />
 
-        <div className="p-10 w-full">
-            <Outlet />
-        </div>
-    </main> 
+        
+    </main>*/}
     </>
   )
 }

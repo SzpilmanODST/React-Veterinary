@@ -37,9 +37,9 @@ export default function Register() {
   return (
     <>
       <h1 className='text-4xl font-black'>Registrar trabajador</h1>
-      <p>Registra a un nuevo trabajador (doctor o secretaria) llenando el siguiente formulario</p>
+      <p className='mt-10'>Registra a un nuevo trabajador (doctor o secretaria) llenando el siguiente formulario</p>
 
-      <div className='bg-white shadow-md rounded-md mt-10 px-5 py-10'>
+      <div className='bg-white shadow-md rounded-md mt-5 px-5 py-10'>
         <form 
           onSubmit={handleSubmit}
         >

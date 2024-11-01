@@ -7,10 +7,15 @@ export default function NavBar() {
 
   return (
     <nav 
-        className="bg-teal-500 w-full p-3 flex justify-between"
+        className="bg-teal-500 w-full p-3 flex justify-between items-center"
     >
         <a className="text-white font-bold text-2xl" href='/appointments'>Veterinaria Petunia</a>
-        {user ? <a className='text-white font-bold' href={"/pet-owners/list"}>Dueños</a> : null}
+        
+        <div>
+          {user ? <a className='text-white font-bold mr-10' href={"/pet-owners/list"}>Dueños</a> : null}
+          {user ? <a className='text-white font-bold' href={"/pets/list"}>Mascotas</a> : null}
+        </div>
+        
         {user ? <button className='text-white font-bold' onClick={logout}>Cerrar sesión</button> : null}
         
     </nav>
