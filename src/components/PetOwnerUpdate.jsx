@@ -13,7 +13,7 @@ export default function PetOwnerUpdate() {
   useEffect(() => {
     const fetchData = async () => {
       const data = await showPetOwner(id);
-      setPetOwnerData(data);
+      setPetOwnerData(data.petOwner);
 
     };
 

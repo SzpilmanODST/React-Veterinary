@@ -5,8 +5,7 @@ import Alert from "./Alert";
 
 export default function PetOwnerForm({initialData = null, onSubmit}) {
 
-  const {errors, addPetOwner, indexPetOwners} = usePetOwner();
-  const navigate = useNavigate();
+  const {errors} = usePetOwner();
 
   const nameRef = useRef(null);
   const last_nameRef = useRef(null);
@@ -19,10 +18,8 @@ export default function PetOwnerForm({initialData = null, onSubmit}) {
       last_nameRef.current.value = initialData.last_name;
       cellphoneRef.current.value = initialData.cellphone;
       emailRef.current.value = initialData.email;
-      console.log("Desde el if")
     }
 
-    console.log("Desde fuera del if")
   }, [initialData]);
 
   const handleSubmit = (e) => {
@@ -36,14 +33,6 @@ export default function PetOwnerForm({initialData = null, onSubmit}) {
     }
 
     onSubmit(data);
-
-    //const result = await addPetOwner(data);
-    //await indexPetOwners(1, '', '', '', '');
-
-
-    //if(result.success) {
-    //  navigate('/pet-owners/list')
-    //}
   }
 
 
@@ -54,7 +43,7 @@ export default function PetOwnerForm({initialData = null, onSubmit}) {
           {initialData ? 'Editar dueño' : 'Registrar dueño'}
         </h1>
 
-        <div className='bg-white shadow-md rounded-md mt-5 px-5 py-10'>
+        <div className='bg-white shadow-md rounded-md my-5 px-5 py-10'>
           <form onSubmit={handleSubmit}>
             {errors ? errors.map(error => <Alert key={error}>{error}</Alert>) : null}
               <div className='mb-6'>

@@ -1,5 +1,6 @@
 import { Outlet } from "react-router-dom";
 import NavBar from "../components/NavBar";
+import { ToastContainer } from "react-toastify";
 
 
 export default function PetsLayout() {
@@ -11,6 +12,8 @@ export default function PetsLayout() {
             <h1 className='uppercase font-black text-4xl'>Mascotas</h1>
             <Outlet />
         </div>
+
+        <ToastContainer></ToastContainer>
     </>
   )
 }

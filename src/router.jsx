@@ -12,6 +12,10 @@ import PetOwnerEdit from "./views/PetOwnerEdit";
 import PetOwnerDetails from "./views/PetOwnerDetails";
 import PetsLayout from "./layouts/PetsLayout";
 import Pets from "./views/Pets";
+import PetCreate from "./views/PetCreate";
+import PetEdit from "./views/PetEdit";
+import DoctorsLayout from "./layouts/DoctorsLayout";
+import Doctors from "./views/Doctors";
 
 
 const router = createBrowserRouter([
@@ -72,6 +76,24 @@ const router = createBrowserRouter([
             {
                 path: '/pets/list',
                 element: <Pets />
+            },
+            {
+                path: '/pets/create',
+                element: <PetCreate />
+            },
+            {
+                path: '/pets/edit/:id',
+                element: <PetEdit />
+            }
+        ]
+    },
+    {
+        path: 'doctors',
+        element: <DoctorsLayout />,
+        children: [
+            {
+                path: '/doctors/list',
+                element: <Doctors />
             }
         ]
     }
